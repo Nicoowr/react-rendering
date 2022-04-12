@@ -5,5 +5,9 @@ import data from "../data/longText.json";
 
 export const ComplexComponentV1 = ({ counter }: { counter: number }) => {
   const hashedCounter = counter === 0 ? counter : MD5(data);
-  return <div>{hashedCounter}</div>;
+  return (
+    <div
+      style={{ marginBottom: "1em" }}
+    >{`Complex component displays hashed counter: ${hashedCounter}`}</div>
+  );
 };

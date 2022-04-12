@@ -11,8 +11,12 @@ export const ComplexComponentV2 = ({
   isStale?: boolean;
 }) => {
   if (isStale) {
-    return <div>{"I'm loading..."}</div>;
+    return <div style={{ marginBottom: "1em" }}>{"I'm loading..."}</div>;
   }
   const hashedCounter = counter === 0 ? counter : MD5(data);
-  return <div>{hashedCounter}</div>;
+  return (
+    <div
+      style={{ marginBottom: "1em" }}
+    >{`Complex component hashed counter: ${hashedCounter}`}</div>
+  );
 };
