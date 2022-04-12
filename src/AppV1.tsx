@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./App.css";
-import { ComplexComponentBefore } from "./components/ComplexComponentBefore";
+import { ComplexComponentV1 } from "./components/ComplexComponentV1";
 import { SimpleComponent } from "./components/SimpleComponent";
 
-function AppBefore() {
+function AppV1() {
   const [counter, setCounter] = useState(0);
   console.log("counter", counter);
   return (
     <div className="App">
-      <ComplexComponentBefore counter={counter} />
+      <ComplexComponentV1 counter={counter} />
       <SimpleComponent counter={counter} />
       <button onClick={() => setCounter(counter + 1)}>Increment</button>
     </div>
   );
 }
 
-export default AppBefore;
+export default AppV1;

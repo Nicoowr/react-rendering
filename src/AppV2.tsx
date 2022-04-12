@@ -1,15 +1,15 @@
 import React, { useDeferredValue, useState } from "react";
 import "./App.css";
-import { ComplexComponentAfter } from "./components/ComplexComponentAfter";
+import { ComplexComponentV2 } from "./components/ComplexComponentV2";
 import { SimpleComponent } from "./components/SimpleComponent";
 
-function AppAfter() {
+function AppV2() {
   const [counter, setCounter] = useState(0);
   const deferredCounter = useDeferredValue(counter);
   console.log("counter", counter);
   return (
     <div className="App">
-      <ComplexComponentAfter
+      <ComplexComponentV2
         counter={deferredCounter}
         isStale={deferredCounter !== counter}
       />
@@ -19,4 +19,4 @@ function AppAfter() {
   );
 }
 
-export default AppAfter;
+export default AppV2;
