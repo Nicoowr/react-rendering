@@ -8,11 +8,9 @@ function AppBefore() {
   console.log("counter", counter);
   return (
     <div className="App">
-      <div>{counter}</div>
       <ComplexComponentBefore counter={counter} />
       <SimpleComponent counter={counter} />
       <button onClick={() => setCounter(counter + 1)}>Increment</button>
-      <button onClick={() => void 0}>Dummy</button>
     </div>
   );
 }
