@@ -5,6 +5,7 @@ export const boxStyle: React.CSSProperties = {
   border: "solid",
   borderWidth: "0.1em",
   padding: "0.5em",
+  width: "500px",
 };
 
 export const SimpleComponent = ({ counter }: { counter: number }) => {
