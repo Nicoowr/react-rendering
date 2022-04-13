@@ -7,7 +7,7 @@ function AppV1() {
   const [counter, setCounter] = useState(0);
   console.log("counter", counter);
   return (
-    <div className="App">
+    <div className="App" style={{ verticalAlign: "middle" }}>
       <ComplexComponentV1 counter={counter} />
       <SimpleComponent counter={counter} />
       <button onClick={() => setCounter(counter + 1)}>Increment</button>
