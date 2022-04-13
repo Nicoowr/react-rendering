@@ -1,5 +1,6 @@
 import React, { useDeferredValue, useState } from "react";
 import "./App.css";
+import { AppStyle } from "./AppV1";
 import { ComplexComponentV2 } from "./components/ComplexComponentV2";
 import { SimpleComponent } from "./components/SimpleComponent";
 
@@ -8,7 +9,7 @@ function AppV2() {
   const deferredCounter = useDeferredValue(counter);
   console.log("counter", counter);
   return (
-    <div className="App">
+    <div className="App" style={AppStyle}>
       <ComplexComponentV2
         counter={deferredCounter}
         isStale={deferredCounter !== counter}
