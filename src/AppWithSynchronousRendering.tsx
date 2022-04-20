@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { SimpleComponent } from "./components/SimpleComponent";
-import { CostlyRenderComponent } from "./components/CostlyRenderComponent";
+import { ExpensiveRenderComponent } from "./components/ExpensiveRenderComponent";
 
 export const AppStyle: React.CSSProperties = {
   display: "flex",
@@ -14,7 +14,7 @@ function AppWithSynchronousRendering() {
   const [counter, setCounter] = useState(0);
   return (
     <div className="App" style={AppStyle}>
-      <CostlyRenderComponent counter={counter} />
+      <ExpensiveRenderComponent counter={counter} />
       <SimpleComponent counter={counter} />
       <button onClick={() => setCounter(counter + 1)}>Increment</button>
     </div>

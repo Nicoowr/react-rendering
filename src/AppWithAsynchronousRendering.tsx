@@ -1,7 +1,7 @@
 import React, { useDeferredValue, useState } from "react";
 import "./App.css";
 import { AppStyle } from "./AppWithSynchronousRendering";
-import { CostlyRenderComponent } from "./components/CostlyRenderComponent";
+import { ExpensiveRenderComponent } from "./components/ExpensiveRenderComponent";
 import { SimpleComponent } from "./components/SimpleComponent";
 
 function AppWithAsynchronousRendering() {
@@ -10,7 +10,7 @@ function AppWithAsynchronousRendering() {
 
   return (
     <div className="App" style={AppStyle}>
-      <CostlyRenderComponent
+      <ExpensiveRenderComponent
         counter={deferredCounter}
         isStale={deferredCounter !== counter}
       />
