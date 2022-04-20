@@ -9,5 +9,5 @@ export const boxStyle: React.CSSProperties = {
 };
 
 export const SimpleComponent = ({ counter }: { counter: number }) => {
-  return <div style={boxStyle}>{`Simple component: ${counter}`}</div>;
+  return <div style={boxStyle}>{`Basic component: ${counter}`}</div>;
 };
