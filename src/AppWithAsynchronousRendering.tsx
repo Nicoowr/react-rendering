@@ -1,16 +1,16 @@
 import React, { useDeferredValue, useState } from "react";
 import "./App.css";
-import { AppStyle } from "./AppV1";
-import { ComplexComponentV2 } from "./components/ComplexComponentV2";
+import { AppStyle } from "./AppWithSynchronousRendering";
+import { CostlyRenderComponent } from "./components/CostlyRenderComponent";
 import { SimpleComponent } from "./components/SimpleComponent";
 
-function AppV2() {
+function AppWithAsynchronousRendering() {
   const [counter, setCounter] = useState(0);
   const deferredCounter = useDeferredValue(counter);
-  console.log("counter", counter);
+
   return (
     <div className="App" style={AppStyle}>
-      <ComplexComponentV2
+      <CostlyRenderComponent
         counter={deferredCounter}
         isStale={deferredCounter !== counter}
       />
@@ -20,4 +20,4 @@ function AppV2() {
   );
 }
 
-export default AppV2;
+export default AppWithAsynchronousRendering;

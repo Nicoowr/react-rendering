@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import { ComplexComponentV1 } from "./components/ComplexComponentV1";
 import { SimpleComponent } from "./components/SimpleComponent";
+import { CostlyRenderComponent } from "./components/CostlyRenderComponent";
 
 export const AppStyle: React.CSSProperties = {
   display: "flex",
@@ -10,16 +10,15 @@ export const AppStyle: React.CSSProperties = {
   flexDirection: "column",
 };
 
-function AppV1() {
+function AppWithSynchronousRendering() {
   const [counter, setCounter] = useState(0);
-  console.log("counter", counter);
   return (
     <div className="App" style={AppStyle}>
-      <ComplexComponentV1 counter={counter} />
+      <CostlyRenderComponent counter={counter} />
       <SimpleComponent counter={counter} />
       <button onClick={() => setCounter(counter + 1)}>Increment</button>
     </div>
   );
 }
 
-export default AppV1;
+export default AppWithSynchronousRendering;
