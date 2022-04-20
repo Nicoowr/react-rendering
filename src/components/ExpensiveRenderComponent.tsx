@@ -2,7 +2,7 @@ import React from "react";
 import { MD5 } from "object-hash";
 
 import data from "../data/longText.json";
-import { boxStyle } from "./SimpleComponent";
+import { boxStyle } from "./BasicComponent";
 
 export const ExpensiveRenderComponent = ({
   counter,

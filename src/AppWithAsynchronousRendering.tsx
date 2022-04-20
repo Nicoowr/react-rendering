@@ -2,7 +2,7 @@ import React, { useDeferredValue, useState } from "react";
 import "./App.css";
 import { AppStyle } from "./AppWithSynchronousRendering";
 import { ExpensiveRenderComponent } from "./components/ExpensiveRenderComponent";
-import { SimpleComponent } from "./components/SimpleComponent";
+import { BasicComponent } from "./components/BasicComponent";
 
 function AppWithAsynchronousRendering() {
   const [counter, setCounter] = useState(0);
@@ -14,7 +14,7 @@ function AppWithAsynchronousRendering() {
         counter={deferredCounter}
         isStale={deferredCounter !== counter}
       />
-      <SimpleComponent counter={counter} />
+      <BasicComponent counter={counter} />
       <button onClick={() => setCounter(counter + 1)}>Increment</button>
     </div>
   );

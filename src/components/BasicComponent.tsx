@@ -8,6 +8,6 @@ export const boxStyle: React.CSSProperties = {
   width: "500px",
 };
 
-export const SimpleComponent = ({ counter }: { counter: number }) => {
+export const BasicComponent = ({ counter }: { counter: number }) => {
   return <div style={boxStyle}>{`Basic component: ${counter}`}</div>;
 };
